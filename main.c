@@ -1,5 +1,6 @@
 #include "ft_printf.h"
 
 int	main() {
-	ft_printf("Hello world\n");
+	char *s = "1234";
+	ft_printf("Hello world %s Hello\n", s);
 }
