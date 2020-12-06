@@ -1,51 +1,25 @@
 #include "ft_printf.h"
 
-void ft_parse(t_list *node, char *str)
+int	ft_parse(t_pfl *node)
 {
-	node->content = str;
-}
-
-void ft_print_node(t_list *node)
-{
-	printf("%s", node->content);
+	return (0);
 }
 
 int	ft_printf(const char *s, ...)
 {
-	int		i;
-	char *str;
-	va_list		args;
-	t_list	*r_node;
-    t_list  *b_node;
-
-	str = (char *)s;
-	r_node = ft_lstnew(NULL);
-    b_node = ft_lstnew(NULL);
-	if (r_node)
+	int	res;
+	t_pfl	*r_node;
+	
+	res = 0;
+	r_node = malloc(sizeof(r_node));
+	if (r_node && s)
 	{
-		i = 0;
-		va_start(args, s);
-		while(str[i])
-		{
-				if(str[i] == '%' && str[i+1] && str[i+1] == 's')
-				{
-					r_node->content = malloc(i + 1);
-					if (r_node->content)
-					{
-						ft_strlcpy(r_node->content, str, i - 1);
-						str = str + i + 1;
-						i = 0;
-					}
-					ft_parse(b_node, va_arg(args, char *));
-                    ft_lstadd_back(&r_node, b_node);
-                    b_node = ft_lstnew(NULL);
-				}
-				i++;
-		}
-		b_node->content = (char *)str;
-        ft_lstadd_back(&r_node, b_node);
+		r_node->str = (char *)s;
+		r_node->r_count = res;
+		va_start(r_node->args, s);
+		res = ft_parse(r_node);
+		va_end(r_node->args);
+		free(r_node);
 	}
-	ft_lstiter(r_node, &ft_print_node);
-	va_end(args);
-	return (0);
+	return (res);
 }
