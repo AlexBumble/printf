@@ -5,32 +5,29 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <unistd.h>
 
-typedef struct        s_list
+typedef	struct		s_spfr
 {
-    char            *content;
-    struct s_list    *next;
-}                    t_list;
+	int				(*handler)(struct s_spfr *);
+	void			*arg;
+}					t_spfr;
 
-typedef	struct	s_pfl
+typedef	struct		s_pfs
 {
-	char	*str;
-	int	r_count;
-	va_list	*args;
-}			t_pfl;
+	char			*str;
+	int				r_count;
+	va_list			args;
+	t_spfr			*spfr;
+}					t_pfs;
 
-t_list                *ft_lstnew(void *content);
-void                ft_lstadd_front(t_list **lst, t_list *new);
-int                    ft_lstsize(t_list *lst);
-t_list                *ft_lstlast(t_list *lst);
-void                ft_lstadd_back(t_list **lst, t_list *new);
-void                ft_lstdelone(t_list *lst, void (*del)(void *));
-void                ft_lstclear(t_list **lst, void (*del)(void *));
-void    ft_lstiter(t_list *lst, void (*f)(t_list *));
-t_list                *ft_lstmap(t_list *lst, void *(*f)(void *),
-                                                void (*del)(void *));
+int					ft_printf(const char *str, ...);
+int					ft_parse(t_pfs *node);
+int					ft_putstr(char *str);
+int					ft_putchar(char c);
+size_t				ft_strlen(const char *s);
 
-int	ft_printf(const char *str, ...);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+/* Handlers */
+int					handle_s(struct s_spfr *spfr);
 
 #endif

@@ -1,18 +1,14 @@
 #include "ft_printf.h"
 
-int	ft_parse(t_pfl *node)
-{
-	return (0);
-}
-
 int	ft_printf(const char *s, ...)
 {
 	int	res;
-	t_pfl	*r_node;
+	t_pfs	*r_node;
 	
 	res = 0;
-	r_node = malloc(sizeof(r_node));
-	if (r_node && s)
+	r_node = malloc(sizeof(t_pfs));
+	r_node->spfr = malloc(sizeof(t_spfr));
+	if (r_node && s && r_node->spfr)
 	{
 		r_node->str = (char *)s;
 		r_node->r_count = res;

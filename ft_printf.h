@@ -5,9 +5,26 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdarg.h>
-# include "lst/lst.h"
+# include <unistd.h>
 
-int	ft_printf(const char *str, ...);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+typedef	struct		s_spfr
+{
+	int				*(*handler)(struct s_spfr *);
+	void			*arg;
+}					t_spfr;
+
+typedef	struct		s_pfs
+{
+	char			*str;
+	int				r_count;
+	va_list			args;
+	t_spfr			*spfr;
+}					t_pfs;
+
+int					ft_printf(const char *str, ...);
+int					ft_parse(t_pfs *node);
+int					ft_putstr(char *str);
+int					ft_putchar(char c);
+size_t				ft_strlen(const char *s);
 
 #endif

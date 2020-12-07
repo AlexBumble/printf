@@ -8,9 +8,9 @@
 
 #include "ft_printf.h"
 
-int    main() {
-//    char *s = "1234";
-//    ft_printf("Hello world %s Hello\n", s);
-	int i = printf(NULL);
-	printf("%d\n", i);
+int	main() {
+	char *s = "123";
+	int i = ft_printf("Hello world%sHello world%sHello world%s", s, s, s);
+	printf("res >>> %d\n", i);
+	return (0);
 }
