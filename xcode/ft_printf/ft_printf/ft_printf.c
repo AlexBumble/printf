@@ -15,6 +15,7 @@ int	ft_printf(const char *s, ...)
 		va_start(r_node->args, s);
 		res = ft_parse(r_node);
 		va_end(r_node->args);
+		free(r_node->spfr);
 		free(r_node);
 	}
 	return (res);

@@ -8,11 +8,6 @@
 
 #include "ft_printf.h"
 
-static	int	handle_s(t_spfr *spfr)
-{
-	return ft_putstr((char *)spfr->arg);
-}
-
 static	int	parse_type(t_pfs *node)
 {
 	if (*node->str == 's')

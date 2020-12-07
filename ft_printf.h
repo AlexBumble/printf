@@ -9,7 +9,7 @@
 
 typedef	struct		s_spfr
 {
-	int				*(*handler)(struct s_spfr *);
+	int				(*handler)(struct s_spfr *);
 	void			*arg;
 }					t_spfr;
 
@@ -26,5 +26,8 @@ int					ft_parse(t_pfs *node);
 int					ft_putstr(char *str);
 int					ft_putchar(char c);
 size_t				ft_strlen(const char *s);
+
+/* Handlers */
+int					handle_s(struct s_spfr *spfr);
 
 #endif
