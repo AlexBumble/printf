@@ -8,6 +8,7 @@ int	ft_printf(const char *s, ...)
 	res = 0;
 	r_node = malloc(sizeof(t_pfs));
 	r_node->spfr = malloc(sizeof(t_spfr));
+	r_node->spfr->flag = malloc(sizeof(t_flag));
 	if (r_node && s && r_node->spfr)
 	{
 		r_node->str = (char *)s;
@@ -15,6 +16,7 @@ int	ft_printf(const char *s, ...)
 		va_start(r_node->args, s);
 		res = ft_parse(r_node);
 		va_end(r_node->args);
+		free(r_node->spfr->flag);
 		free(r_node->spfr);
 		free(r_node);
 	}

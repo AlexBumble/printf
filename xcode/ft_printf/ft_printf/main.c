@@ -10,7 +10,10 @@
 
 int	main() {
 	char *s = "123";
-	int i = ft_printf("Hello world%sHello world%sHello world%s", s, s, s);
+
+	int i = ft_printf("Hello world%s", s);
 	printf("res >>> %d\n", i);
+	int ij= printf("Hello world%s", s);
+	printf("res >>> %d\n", ij);
 	return (0);
 }

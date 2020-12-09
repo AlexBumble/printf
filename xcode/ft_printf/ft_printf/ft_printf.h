@@ -7,10 +7,18 @@
 # include <stdarg.h>
 # include <unistd.h>
 
+typedef	struct		s_flag
+{
+	char			*accuracy;
+	char			*width;
+	char			*flags;
+}					t_flag;
+
 typedef	struct		s_spfr
 {
 	int				(*handler)(struct s_spfr *);
 	void			*arg;
+	t_flag			*flag;
 }					t_spfr;
 
 typedef	struct		s_pfs
@@ -25,6 +33,7 @@ int					ft_printf(const char *str, ...);
 int					ft_parse(t_pfs *node);
 int					ft_putstr(char *str);
 int					ft_putchar(char c);
+int					ft_isType(char c);
 size_t				ft_strlen(const char *s);
 
 /* Handlers */

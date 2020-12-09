@@ -18,14 +18,35 @@ static	int	parse_type(t_pfs *node)
 	return (1);
 }
 
+static	int	parse_flag(t_pfs *node)
+{
+	if (*node->str == 's')
+	{
+		node->spfr->handler = &handle_s;
+	}
+	node->spfr->arg = va_arg(node->args, void*);
+	return (1);
+}
+
 static	int	parse_spfr(t_pfs *node)
 {
 	int	i;
+	int	typeIsFind;
 
 	i = 1;
-	if (*++node->str != '%')
-	{
-		i += parse_type(node);
+	typeIsFind = 0;
+	while (!typeIsFind && *++node->str) {
+		if (ft_contains("0", *node->str))
+		{
+			
+		}
+		else if (ft_isType(node->str))
+		{
+			i += parse_type(node);
+			typeIsFind = 1;
+		}
+		else
+			i++;
 	}
 	return (i);
 }
