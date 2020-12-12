@@ -15,7 +15,7 @@ int	ft_isType(char c)
 	typeFlags = "s";
 	while (typeFlags)
 	{
-		if (str[i] == c)
+		if (typeFlags[i] == c)
 			return (1);
 		i++;
 	}

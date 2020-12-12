@@ -1,19 +1,17 @@
 //
-//  ft_isFlag.c
+//  ft_contains.c
 //  ft_printf
 //
-//  Created by Joramun Bane on 12/9/20.
+//  Created by Алексей Бузов on 12.12.2020.
 //  Copyright © 2020 Joramun Bane. All rights reserved.
 //
 
-int	ft_isFlag(char c)
+int	ft_contains(const char *str, char c)
 {
-	int		i;
-	char	*typeFlags;
-
+	int	i;
+	
 	i = 0;
-	typeFlags = "0-*.";
-	while (typeFlags)
+	while (str[i])
 	{
 		if (str[i] == c)
 			return (1);

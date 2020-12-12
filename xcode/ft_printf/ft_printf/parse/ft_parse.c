@@ -18,16 +18,6 @@ static	int	parse_type(t_pfs *node)
 	return (1);
 }
 
-static	int	parse_flag(t_pfs *node)
-{
-	if (*node->str == 's')
-	{
-		node->spfr->handler = &handle_s;
-	}
-	node->spfr->arg = va_arg(node->args, void*);
-	return (1);
-}
-
 static	int	parse_spfr(t_pfs *node)
 {
 	int	i;
@@ -36,11 +26,11 @@ static	int	parse_spfr(t_pfs *node)
 	i = 1;
 	typeIsFind = 0;
 	while (!typeIsFind && *++node->str) {
-		if (ft_contains("0", *node->str))
+		if (ft_isFlag(*node->str))
 		{
-			
+			i += parse_flag(node);
 		}
-		else if (ft_isType(node->str))
+		else if (ft_isType(*node->str))
 		{
 			i += parse_type(node);
 			typeIsFind = 1;
@@ -57,13 +47,14 @@ int	ft_parse(t_pfs *node)
 	{
 		if (*node->str != '%')
 		{
-			node->str = node->str +ft_putchar(*node->str);
+			node->str = node->str + ft_putchar(*node->str);
 			node->r_count++;
 		}
 		else
 		{
 			node->str = node->str + parse_spfr(node);
-			node->r_count += node->spfr->handler(node->spfr);
+			if (node->spfr->handler)
+				node->r_count += node->spfr->handler(node->spfr);
 		}
 	}
 	return (node->r_count);
