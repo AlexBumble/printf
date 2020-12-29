@@ -12,7 +12,7 @@ int	ft_isType(char c)
 	char	*typeFlags;
 
 	i = 0;
-	typeFlags = "s";
+	typeFlags = "s%";
 	while (typeFlags)
 	{
 		if (typeFlags[i] == c)

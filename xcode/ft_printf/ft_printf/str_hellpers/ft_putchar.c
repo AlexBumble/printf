@@ -11,7 +11,5 @@
 
 int	ft_putchar(char c)
 {
-	if (c == 's')
-		printf("s");
 	return (write(1, &c, 1));
 }

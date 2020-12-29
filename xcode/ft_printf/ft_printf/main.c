@@ -11,9 +11,9 @@
 int	main() {
 	char *s = "123";
 
-	int i = ft_printf("Hello world%0s", s);
+	int i = ft_printf("Hello world%% 0s ", s);
 	printf("res >>> %d\n", i);
-	int ij= printf("Hello world%05s", s);
+	int ij= printf("Hello world%% 0s ", s);
 	printf("res >>> %d\n", ij);
 	return (0);
 }

@@ -19,9 +19,11 @@ int	ft_isFlag(char c)
 	typeFlags = "0-*.";
 	while (typeFlags[i])
 	{
-		if (typeFlags[i] == c || ft_atoi(str))
+		if (typeFlags[i] == c)
 			return (1);
 		i++;
 	}
+	if (ft_atoi(str))
+		return  (1);
 	return (0);
 }

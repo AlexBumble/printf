@@ -92,5 +92,6 @@ int					ft_contains(const char *str, char c);
 ** Обработчики флагов.
 */
 int					handle_s(struct s_spfr *spfr);
+int					handle_prsnt(struct s_spfr *spfr);
 
 #endif
