@@ -21,14 +21,20 @@ static	int	parse_type(t_pfs *node)
 static	int	parse_spfr(t_pfs *node)
 {
 	int	i;
+	int buf;
 	int	typeIsFind;
 
 	i = 1;
+	buf = 0;
 	typeIsFind = 0;
 	while (!typeIsFind && *++node->str)
 	{
 		if (ft_isFlag(*node->str))
-			i += parse_flag(node);
+		{
+			buf = parse_flag(node);
+			i += buf;
+			node->str += buf - 1;
+		}
 		else if (ft_isType(*node->str))
 		{
 			i += parse_type(node);

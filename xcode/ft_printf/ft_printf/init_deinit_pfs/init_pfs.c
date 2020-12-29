@@ -15,6 +15,8 @@ static	t_flag	*ft_newFlag()
 	new = malloc(sizeof(t_flag));
 	if (new)
 	{
+		new->flags[0] = '\0';
+		new->flags[1] = '\0';
 		new->accuracy = 0;
 		new->size = 0;
 		new->width = 0;
