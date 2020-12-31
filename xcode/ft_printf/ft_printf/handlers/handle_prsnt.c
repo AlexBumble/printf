@@ -10,6 +10,14 @@
 
 int	handle_prsnt(struct s_spfr *spfr)
 {
-	return ft_putchar('%');
+	int res;
+	
+	res = 0;
+	if (spfr->f->flags[0] && !spfr->f->flags[1])
+		res += apply_flag(spfr, 1);
+	res += ft_putchar('%');
+	if (spfr->f->flags[1])
+		res += apply_flag(spfr, 1);
+	return (res);
 }
 

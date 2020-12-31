@@ -89,9 +89,14 @@ int					ft_isFlag(char c);
 int					ft_contains(const char *str, char c);
 
 /*
-** Обработчики флагов.
+** Обработчики спецификаторов.
 */
 int					handle_s(struct s_spfr *spfr);
 int					handle_prsnt(struct s_spfr *spfr);
+
+/*
+** Обработчики флага спецификатора.
+*/
+int			apply_flag(struct s_spfr *spfr, int argLen);
 
 #endif
