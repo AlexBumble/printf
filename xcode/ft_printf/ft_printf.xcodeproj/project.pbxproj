@@ -16,6 +16,7 @@
 		81C290372584C717002A1FB5 /* parse_flag.c in Sources */ = {isa = PBXBuildFile; fileRef = 81C290362584C717002A1FB5 /* parse_flag.c */; };
 		81F2F804259B051C00DC255F /* handle_prsnt.c in Sources */ = {isa = PBXBuildFile; fileRef = 81F2F803259B051C00DC255F /* handle_prsnt.c */; };
 		81F2F80B259DC12A00DC255F /* apply_flag.c in Sources */ = {isa = PBXBuildFile; fileRef = 81F2F80A259DC12A00DC255F /* apply_flag.c */; };
+		81F2F81025A2052600DC255F /* handle_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 81F2F80F25A2052600DC255F /* handle_c.c */; };
 		EFD2690425812C86002A5B26 /* ft_isTypeFlag.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD2690325812C86002A5B26 /* ft_isTypeFlag.c */; };
 		EFD2690625812CD1002A5B26 /* ft_isFlag.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD2690525812CD1002A5B26 /* ft_isFlag.c */; };
 		EFD40145257E76F40000FF34 /* ft_parse.c in Sources */ = {isa = PBXBuildFile; fileRef = EFD40144257E76F40000FF34 /* ft_parse.c */; };
@@ -49,6 +50,7 @@
 		81C290362584C717002A1FB5 /* parse_flag.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = parse_flag.c; sourceTree = "<group>"; };
 		81F2F803259B051C00DC255F /* handle_prsnt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = handle_prsnt.c; sourceTree = "<group>"; };
 		81F2F80A259DC12A00DC255F /* apply_flag.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = apply_flag.c; sourceTree = "<group>"; };
+		81F2F80F25A2052600DC255F /* handle_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = handle_c.c; sourceTree = "<group>"; };
 		EFD2690325812C86002A5B26 /* ft_isTypeFlag.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_isTypeFlag.c; sourceTree = "<group>"; };
 		EFD2690525812CD1002A5B26 /* ft_isFlag.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_isFlag.c; sourceTree = "<group>"; };
 		EFD40144257E76F40000FF34 /* ft_parse.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ft_parse.c; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				EFD40152257E98F80000FF34 /* handle_s.c */,
 				81F2F803259B051C00DC255F /* handle_prsnt.c */,
+				81F2F80F25A2052600DC255F /* handle_c.c */,
 			);
 			path = handlers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				EFD40150257E93EE0000FF34 /* ft_putchar.c in Sources */,
 				EFDC040B257B9ADA006373A5 /* ft_printf.c in Sources */,
 				81F2F804259B051C00DC255F /* handle_prsnt.c in Sources */,
+				81F2F81025A2052600DC255F /* handle_c.c in Sources */,
 				81C290242584B165002A1FB5 /* ft_strlcpy.c in Sources */,
 				EFDC03F5257B9A71006373A5 /* main.c in Sources */,
 				EFD4014D257E930B0000FF34 /* ft_putstr.c in Sources */,

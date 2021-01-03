@@ -9,11 +9,13 @@
 #include "ft_printf.h"
 
 int	main() {
+	char *p = "pp";
 	char *s = "123";
+	char c = '1';
 
-	int i = ft_printf("Hello world%05%", s);
+	int i = ft_printf("Hello world%-4s", c);
 	printf("<!>res >>> %d\n", i);
-	int ij= printf("Hello world%05%", s);
+	int ij= printf("Hello world%-4s", c);
 	printf("<!>res >>> %d\n", ij);
 	return (0);
 }

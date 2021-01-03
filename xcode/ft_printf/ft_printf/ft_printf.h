@@ -93,6 +93,7 @@ int					ft_contains(const char *str, char c);
 */
 int					handle_s(struct s_spfr *spfr);
 int					handle_prsnt(struct s_spfr *spfr);
+int					handle_c(struct s_spfr *spfr);
 
 /*
 ** Обработчики флага спецификатора.
