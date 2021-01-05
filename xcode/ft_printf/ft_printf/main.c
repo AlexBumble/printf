@@ -13,9 +13,13 @@ int	main() {
 	char *s = "123";
 	char c = '1';
 
-	int i = ft_printf("Hello world%-4s", c);
+	int i = ft_printf("Hello world%s\nHello world%05s\nHello world%-5%\nHello world%-5c\n", s,s,c);
 	printf("<!>res >>> %d\n", i);
-	int ij= printf("Hello world%-4s", c);
+	int ij= printf("Hello world%s\nHello world%05s\nHello world%-5%\nHello world%-5c\n", s,s,c);
 	printf("<!>res >>> %d\n", ij);
+//	int i = ft_printf("Hello world%-5c\n", c);
+//	printf("<!>res >>> %d\n", i);
+//	int ij= printf("Hello world%-5c\n", c);
+//	printf("<!>res >>> %d\n", ij);
 	return (0);
 }

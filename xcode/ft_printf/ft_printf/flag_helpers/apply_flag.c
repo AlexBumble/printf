@@ -29,6 +29,7 @@ int	apply_flag(struct s_spfr *spfr, int argLen)
 	if (length < spfr->f->width || spfr->f->width  == -1)
 	{
 		length = spfr->f->width  == -1 ? -1 : spfr->f->width - length;
+		spfr->f->width = 0;
 		selected_flag = select_flag(spfr->f->flags);
 		while (length != 0)
 		{

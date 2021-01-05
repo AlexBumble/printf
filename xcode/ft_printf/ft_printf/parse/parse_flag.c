@@ -38,7 +38,7 @@ int	parse_flag(t_pfs *n)
 	while (ft_isFlag(n->str[i])) {
 		if (ft_contains("0-", n->str[i]) && n->spfr->f->width == 0)
 			parse_flag_zero_or_minus(n, i);
-		else if((bufN = ft_atoi(n->str)) > 0 || n->str[i] == '*')
+		else if((bufN = ft_atoi(n->str + i)) > 0 || n->str[i] == '*')
 		{
 			parse_flag_star_or_num(n, i, bufN, !n->spfr->f->accuracy);
 			if (bufN)
