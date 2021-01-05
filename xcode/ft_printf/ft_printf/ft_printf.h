@@ -89,11 +89,18 @@ int					ft_isFlag(char c);
 int					ft_contains(const char *str, char c);
 
 /*
+** Хелперы работы с памятью.
+*/
+void				ft_bzero(void *s, size_t n);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
+
+/*
 ** Обработчики спецификаторов.
 */
 int					handle_s(struct s_spfr *spfr);
 int					handle_prsnt(struct s_spfr *spfr);
 int					handle_c(struct s_spfr *spfr);
+int					handle_p(struct s_spfr *spfr);
 
 /*
 ** Обработчики флага спецификатора.
