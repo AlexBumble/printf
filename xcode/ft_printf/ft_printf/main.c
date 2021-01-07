@@ -18,7 +18,7 @@ int	main() {
 //	printf("<!>res >>> %d\n", i);
 //	int ij= printf("Hello world%s\nHello world%05s\nHello world%-5%\nHello world%-5c\n", s,s,c);
 //	printf("<!>res >>> %d\n", ij);
-	printf("int -> unsing = %u\n", (unsigned int)n);
+
 	int i = ft_printf("Hello world%05d\n", n);
 	printf("<!>res >>> %d\n", i);
 	int ij= printf("Hello world%05u\n", n);
