@@ -18,6 +18,8 @@ static	int	parse_type(t_pfs *node)
 		node->spfr->handler = &handle_c;
 	else if (*node->str == 'p')
 		node->spfr->handler = &handle_p;
+	else if (*node->str == 'd' || *node->str == 'i')
+		node->spfr->handler = &handle_di;
 	node->spfr->arg = va_arg(node->args, void*);
 	return (1);
 }

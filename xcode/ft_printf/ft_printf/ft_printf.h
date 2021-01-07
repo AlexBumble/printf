@@ -72,6 +72,7 @@ int					parse_flag(t_pfs *n);
 */
 int					ft_putstr(char *str);
 int					ft_putchar(char c);
+void				reverse(char *str, int start_i, int end_i);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
 
@@ -79,6 +80,7 @@ size_t				ft_strlen(const char *s);
 ** Числовые хелперы.
 */
 int					ft_atoi(const char *str);
+char				*ft_itoa(int n);
 int					ft_numlen(int n);
 
 /*
@@ -101,6 +103,7 @@ int					handle_s(struct s_spfr *spfr);
 int					handle_prsnt(struct s_spfr *spfr);
 int					handle_c(struct s_spfr *spfr);
 int					handle_p(struct s_spfr *spfr);
+int					handle_di(struct s_spfr *spfr);
 
 /*
 ** Обработчики флага спецификатора.

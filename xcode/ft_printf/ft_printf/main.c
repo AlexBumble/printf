@@ -12,14 +12,16 @@ int	main() {
 	char *p = "pp";
 	char *s = "123";
 	char c = '1';
+	int n = -100;
 
 //	int i = ft_printf("Hello world%s\nHello world%05s\nHello world%-5%\nHello world%-5c\n", s,s,c);
 //	printf("<!>res >>> %d\n", i);
 //	int ij= printf("Hello world%s\nHello world%05s\nHello world%-5%\nHello world%-5c\n", s,s,c);
 //	printf("<!>res >>> %d\n", ij);
-	int i = ft_printf("Hello world%p\n", s);
+	printf("int -> unsing = %u\n", (unsigned int)n);
+	int i = ft_printf("Hello world%05d\n", n);
 	printf("<!>res >>> %d\n", i);
-	int ij= printf("Hello world%p\n", s);
+	int ij= printf("Hello world%05u\n", n);
 	printf("<!>res >>> %d\n", ij);
 	return (0);
 }

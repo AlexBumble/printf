@@ -8,20 +8,6 @@
 
 #include "ft_printf.h"
 
-static	void	reverse(char *str, int start_i, int end_i)
-{
-	char	c;
-
-	while (start_i < end_i)
-	{
-		c = str[start_i];
-		str[start_i] = str[end_i];
-		str[end_i] = c;
-		start_i++;
-		end_i--;
-	}
-}
-
 static	void	dec_to_hex(char *str, long int l)
 {
 	int	i;
